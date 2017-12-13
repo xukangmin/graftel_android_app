@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/request_all"
+        android:title="Request All"
+        android:visible="false"
+        app:showAsAction="never"/>
+</menu>

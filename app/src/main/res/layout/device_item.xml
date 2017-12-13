@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <TableRow android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:paddingLeft="6dip"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Calibration ID:"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="0dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:paddingLeft="6dip"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_gravity="left"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:textColor="@color/black"
+                android:paddingLeft="6dip"
+                android:textSize="13dip"
+                android:text="MT&amp;E #"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:textColor="@color/black"
+                android:paddingLeft="6dip"
+                android:textSize="17dip"
+                android:layout_gravity="left"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/l3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:paddingLeft="6dip"
+                android:textColor="@color/black"
+                android:textSize="15dip"
+                android:layout_weight="1"
+                android:text="Customer PO#:"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:paddingLeft="6dip"
+                android:textSize="17dip"
+                android:layout_gravity="left" />
+        </TableRow>
+        <TableRow android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/l4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:paddingLeft="6dip"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textSize="15dip"
+                android:text="Status:"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:paddingLeft="6dip"
+                android:textColor="@color/black"
+                android:textSize="17dip"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow android:layout_gravity="center_horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/l5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:textColor="@color/black"
+                android:textSize="15dip"
+                android:text="Certificate:"
+                android:gravity="right"
+                android:layout_gravity="right" />
+            <ImageButton
+                android:id="@+id/img"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:background="@mipmap/pdf"
+                android:layout_gravity="left"/>
+            <TextView
+                android:id="@+id/l6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:paddingLeft="6dip"
+                android:textSize="15dip"
+                android:text="Not Available!"
+                android:visibility="gone"
+                android:layout_gravity="left"/>
+        </TableRow>
+        <TableRow android:layout_gravity="center_horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/requote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Request a Quote "
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="italic"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

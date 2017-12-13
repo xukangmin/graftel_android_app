@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/orders"
+        android:icon="@drawable/home"/>
+
+    <item android:title="Search"
+        android:id="@+id/certi"
+        android:icon="@drawable/search"/>
+
+    <group android:id="@+id/group_user_id">
+
+        <item android:title="View Profile"
+            android:id="@+id/profile"
+            android:icon="@drawable/user"/>
+
+        <item android:title="Settings"
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"/>
+
+    </group>
+
+    <group android:id="@+id/group_settings_id">
+
+        <item android:title="Our Services"
+            android:id="@+id/services"
+            android:icon="@drawable/services"/>
+
+        <item android:title="Send a Message"
+            android:id="@+id/message"
+            android:icon="@drawable/message"/>
+
+        <item android:title="Contact Us"
+            android:id="@+id/contact"
+            android:icon="@drawable/contact"/>
+    </group>
+</menu>

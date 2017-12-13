@@ -1,0 +1,46 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TableRow android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dip"
+                android:textSize="21dip"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+        </TableRow>
+        <TableRow android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/line2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:textSize="17dip"
+                android:drawableLeft="@drawable/mail2"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent" />
+        </TableRow>
+        <TableRow android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/line3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/call2"
+                android:textSize="17dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

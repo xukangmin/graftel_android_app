@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    dexOptions {
+        jumboMode = true
+    }
+
+    defaultConfig {
+        applicationId "com.graftel.www.graftel_2"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 14
+        versionName "1.1.7"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //compile 'com.android.support:appcompat-v7:23.4.0'
+    //compile 'com.android.support:appcompat-v7:22.2.1'
+    //compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:22.2.1'
+    compile files('libs/httpcore-4.2.3.jar')
+    compile files('libs/activation.jar')
+    compile files('libs/additionnal.jar')
+    compile files('libs/httpclient-4.3.6.jar')
+    compile files('libs/mail.jar')
+    compile 'me.dm7.barcodescanner:zxing:1.8.4'
+    compile files('libs/commons-net-3.5.jar')
+    compile files('libs/commons-io-2.5.jar')
+    compile 'com.madgag.spongycastle:core:1.54.0.0'
+    compile 'com.madgag.spongycastle:prov:1.54.0.0'
+    compile 'com.madgag.spongycastle:pkix:1.54.0.0'
+    compile 'com.madgag.spongycastle:pg:1.54.0.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    //compile 'com.amazonaws:aws-android-sdk-core:2.2.+'
+    compile 'com.amazonaws:aws-android-sdk-s3:2.2.+'
+    //compile 'com.amazonaws:aws-android-sdk-ddb:2.2.+'
+}

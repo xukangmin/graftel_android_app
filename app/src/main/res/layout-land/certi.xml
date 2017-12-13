@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eceef0"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View By Date"
+            android:id="@+id/date"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:layout_alignParentLeft="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/start"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+            </Button>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:id="@+id/to"
+                android:textSize="25dp"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/start"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/to"
+                android:id="@+id/end"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+            </Button>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:text="View By PO#"
+            android:id="@+id/textview1"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:id="@+id/po"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:focusable="true"
+            android:background="@color/white"
+            android:layout_below="@+id/textview1"
+            android:textColor="@color/input_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View By Serial#"
+            android:id="@+id/textview2"
+            android:textSize="15dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/editText1"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:id="@+id/serial"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:focusable="true"
+            android:background="@color/white"
+            android:layout_below="@+id/textview2"
+            android:textColor="@color/input_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View By MT&amp;E#"
+            android:id="@+id/textview3"
+            android:textSize="15dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/editText2" />
+
+        <EditText
+            android:id="@+id/mte"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:focusable="true"
+            android:layout_below="@+id/textview3"
+            android:textColor="@color/input_login"
+            android:background="@color/white"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:id="@+id/view"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/editText12"
+            android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Name Label -->
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dip"
+        android:paddingLeft="6dip"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@mipmap/pdf"
+        android:gravity="center"
+        android:id="@+id/pdf"
+        android:layout_alignRight="@+id/line1"
+       />
+
+    <TextView
+        android:id="@+id/l6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dip"
+        android:paddingLeft="6dip"
+        android:textSize="15dip"
+        android:text="No Reports!"
+        android:visibility="gone"
+        android:layout_gravity="left"/>
+
+</RelativeLayout>

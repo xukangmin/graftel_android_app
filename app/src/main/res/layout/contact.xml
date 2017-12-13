@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceef0"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+             <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name*"
+                    android:id="@+id/textview1"
+                    android:textSize="15dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company Name*"
+                    android:id="@+id/textview2"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address*"
+                    android:id="@+id/textview3"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true" />
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message*"
+                    android:id="@+id/textview4"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:textColor="@color/input_login"/>
+
+                <Button
+                    android:id="@+id/btnSend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:text="SEND"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>
