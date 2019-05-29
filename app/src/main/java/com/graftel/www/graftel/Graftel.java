@@ -1,11 +1,12 @@
 package com.graftel.www.graftel;
 
 import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
 /**
  * Created by Shorabh on 7/21/2016.
  */
-public class Graftel extends Application {
+public class Graftel extends MultiDexApplication {
 
     private static Graftel mInstance;
 

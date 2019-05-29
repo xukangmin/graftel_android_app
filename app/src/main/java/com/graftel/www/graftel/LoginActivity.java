@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity
     JSONParser jParser = new JSONParser(); // Creating JSON Parser object
     User u;
 
-    private String url = "http://www.graftel.com/appport/webGetUserInfoProd.php";
+    private String url = "https://www.graftel.com/appport/webGetUserInfoProd.php";
 
     private static final String TAG_SUCCESS = "success";
     boolean email,valid;

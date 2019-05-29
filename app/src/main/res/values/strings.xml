@@ -3,4 +3,5 @@
     <string-array name="spinner_array">
     </string-array>
     <string name="Click_Here">Doesn\'t have an account?<a><u>Click Here</u></a>.</string>
+    <string name="file_provider_authority" translatable="false">com.graftel.fileprovider</string>
 </resources>

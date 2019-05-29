@@ -25,7 +25,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
+
+import java.net.HttpURLConnection;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class JSONParser {
     static InputStream is = null;
@@ -42,20 +48,37 @@ public class JSONParser {
                 HttpClient httpClient = new DefaultHttpClient();
                 HttpPost httpPost = new HttpPost(url);
                 httpPost.setEntity(new UrlEncodedFormEntity(params));
-
                 HttpResponse httpResponse = httpClient.execute(httpPost);
                 HttpEntity httpEntity = httpResponse.getEntity();
                 is = httpEntity.getContent();
 
             }else if(method == "GET"){
-                HttpClient httpClient = new DefaultHttpClient();
+
                 String paramString = URLEncodedUtils.format(params, "utf-8");
                 url += "?" + paramString;
-                HttpGet httpGet = new HttpGet(url);
 
-                HttpResponse httpResponse = httpClient.execute(httpGet);
-                HttpEntity httpEntity = httpResponse.getEntity();
-                is = httpEntity.getContent();
+//                HttpClient httpClient = new DefaultHttpClient();
+//                HttpGet httpGet = new HttpGet(url);
+//
+//                HttpResponse httpResponse = httpClient.execute(httpGet);
+//                HttpEntity httpEntity = httpResponse.getEntity();
+//                is = httpEntity.getContent();
+
+                int resCode;
+                URL req_url = new URL(url);
+                URLConnection urlConn = req_url.openConnection();
+
+                HttpsURLConnection httpsConn = (HttpsURLConnection) urlConn;
+                httpsConn.setAllowUserInteraction(false);
+                httpsConn.setInstanceFollowRedirects(true);
+                httpsConn.setRequestMethod("GET");
+                httpsConn.connect();
+                resCode = httpsConn.getResponseCode();
+
+                if (resCode == HttpURLConnection.HTTP_OK) {
+                    is = httpsConn.getInputStream();
+                }
+
             }
 
         } catch (UnsupportedEncodingException e) {

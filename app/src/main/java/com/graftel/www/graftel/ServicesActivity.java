@@ -16,7 +16,7 @@ public class ServicesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mWebview  = new WebView(this);
         mWebview.getSettings().setJavaScriptEnabled(true);
-        mWebview .loadUrl("http://www.graftel.com/services/");
+        mWebview .loadUrl("https://www.graftel.com/services/");
         setContentView(mWebview);
     }
 }

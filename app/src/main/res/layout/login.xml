@@ -11,31 +11,31 @@
         android:layout_height="match_parent">-->
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="575dp"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
+        android:paddingRight="20dp">
 
         <ImageView
-            android:layout_width="170dp"
-            android:layout_height="150dp"
             android:id="@+id/imageView"
-            android:src="@drawable/login_logo"
-            android:layout_gravity="center"/>
+            android:layout_width="317dp"
+            android:layout_height="218dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_logo" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="10dp"
             android:background="@color/white"
+            android:drawableLeft="@drawable/user"
             android:hint="USERNAME or EMAIL"
             android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:layout_marginTop="40dp"
             android:singleLine="true"
-            android:drawableLeft="@drawable/user"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint" />
 
@@ -45,9 +45,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/white"
+            android:drawableLeft="@drawable/pass"
             android:hint="PASSWORD"
             android:inputType="textPassword"
-            android:drawableLeft="@drawable/pass"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="@color/input_login"
@@ -60,26 +60,25 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
-            android:text="SIGN IN"
-            android:padding="15dp"
             android:background="@android:drawable/dialog_holo_light_frame"
-            android:textSize="25dp"
-            android:textColor="@color/black" />
+            android:padding="15dp"
+            android:text="SIGN IN"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
 
         <Button
             android:id="@+id/btnForgot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dip"
+            android:background="@android:color/transparent"
             android:text="Forgot Password?"
             android:textAllCaps="false"
             android:textColor="#000000"
-            android:background="@android:color/transparent"
             android:textSize="15dp"
-            android:layout_marginTop="15dip"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="italic"
-            />
+            android:textStyle="italic" />
 
 
         <!-- Link to Login Screen -->
@@ -99,14 +98,14 @@
             android:id="@+id/btnRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Click_Here"
+            android:layout_gravity="center_horizontal"
             android:autoLink="web"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:text="@string/Click_Here"
             android:textAllCaps="false"
             android:textColor="#000000"
-            android:background="@android:color/transparent"
-            android:textSize="18dp"
-            android:layout_gravity="center_horizontal"
-            android:clickable="false" />
+            android:textSize="18dp" />
 
 
     </LinearLayout>

@@ -10,11 +10,11 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF3C3C"
+        android:background="#009688"
         android:id="@+id/toolbar"
         android:titleTextColor="@color/white"
         app:theme="@style/ToolbarColoredBackArrow"
-        app:title="Graftel LLC"
+        app:title="Graftel"
         app:titleTextAppearance="@style/AppTheme.Toolbar.Title"/>
 
     <android.support.v4.widget.DrawerLayout

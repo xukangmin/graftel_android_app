@@ -19,6 +19,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -75,7 +76,7 @@ public class DeviceInfoActivity extends AppCompatActivity implements Connectivit
     JSONParser jParser = new JSONParser(); // Creating JSON Parser object
     ArrayList<HashMap<String, String>> tempList;
 
-    private String url = "http://www.graftel.com/appport/webGetAllCalInfoProd.php";
+    private String url = "https://www.graftel.com/appport/webGetAllCalInfoProd.php";
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_CID = "Calibration ID #";
@@ -477,9 +478,15 @@ public class DeviceInfoActivity extends AppCompatActivity implements Connectivit
                 ActivityCompat.requestPermissions(DeviceInfoActivity.this,new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
                 return;
             }
+            Uri fileURI = null;
             try {
+//                Intent i = new Intent(Intent.ACTION_VIEW);
+//                i.setDataAndType(Uri.fromFile(new File(mFileName)), "application/pdf");
+//                startActivity(i);
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setDataAndType(Uri.fromFile(new File(mFileName)), "application/pdf");
+                fileURI = FileProvider.getUriForFile(DeviceInfoActivity.this, getString(R.string.file_provider_authority), new File(mFileName));
+                i.setDataAndType(fileURI, "application/pdf");
+                i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 startActivity(i);
             }
             catch (ActivityNotFoundException e)

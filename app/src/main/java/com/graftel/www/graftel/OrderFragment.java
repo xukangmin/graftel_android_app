@@ -41,7 +41,7 @@ public class OrderFragment extends ListFragment {
     ArrayList<HashMap<String, String>> tempList;
     HashMap<Integer, String> qid = new HashMap<Integer, String>();
     boolean flag=false;
-    private String url = "http://www.graftel.com/appport/webGetOrderInfoProd.php";
+    private String url = "https://www.graftel.com/appport/webGetOrderInfoProd.php";
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_QID = "QuoteID";

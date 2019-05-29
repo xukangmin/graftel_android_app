@@ -34,5 +34,9 @@
         <item android:title="Contact Us"
             android:id="@+id/contact"
             android:icon="@drawable/contact"/>
+
+        <item android:title="Privacy Policy"
+            android:id="@+id/privacy"
+            android:icon="@drawable/message"/>
     </group>
 </menu>

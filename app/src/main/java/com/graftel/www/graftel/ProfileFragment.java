@@ -42,7 +42,7 @@ public class ProfileFragment extends Fragment
     private ProgressDialog pDialog; // Progress Dialog
     JSONParser jParser = new JSONParser(); // Creating JSON Parser object
     String call;
-    private String url = "http://www.graftel.com/appport/webUpdateCustomerInfo.php";
+    private String url = "https://www.graftel.com/appport/webUpdateCustomerInfo.php";
     private static final String TAG_SUCCESS = "success";
     String email,pwd,company,person,ship,phone,fax,addEmail1,addEmail2,addEmail3,addEmail4;
     static EditText e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12;

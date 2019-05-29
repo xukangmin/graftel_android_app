@@ -26,8 +26,8 @@ public class User {
     public static FTPSClient getmFtpClient() {
         try
         {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+       //     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            //    StrictMode.setThreadPolicy(policy);
             mFtpClient = new FTPSClient("SSL");
             mFtpClient.setConnectTimeout(10 * 1000);
             mFtpClient.connect("port.magneticflowmetercalibration.com",48701);

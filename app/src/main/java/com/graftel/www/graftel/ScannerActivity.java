@@ -126,7 +126,7 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         protected String doInBackground(String... args) {
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("quoteId",QID));
-            JSONObject json = jParser.makeHttpRequest("http://www.graftel.com/appport/webGetCalInfoProd.php", "GET", params);
+            JSONObject json = jParser.makeHttpRequest("https://www.graftel.com/appport/webGetCalInfoProd.php", "GET", params);
             if(json!=null) {
                 //Log.d("All Products: ", json.toString());
                 try {

@@ -17,7 +17,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mWebview  = new WebView(this);
         mWebview.getSettings().setJavaScriptEnabled(true);
-        mWebview .loadUrl("http://www.graftel.com/portal/forgot-password/");
+        mWebview .loadUrl("https://www.graftel.com/portal/forgot-password/");
         setContentView(mWebview);
     }
 

@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity implements ConnectivityRecei
         }
         invalidateOptionsMenu();
 
-        t1 = (TextView)findViewById(R.id.username);
-        t2 = (TextView)findViewById(R.id.email);
 
         /**
          *Setup the DrawerLayout and NavigationView
@@ -65,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements ConnectivityRecei
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mNavigationView = (NavigationView) findViewById(R.id.shitstuff) ;
 
+        View header = mNavigationView.getHeaderView(0);
+
+        t1 = header.findViewById(R.id.username);
+        t2 = header.findViewById(R.id.email);
         /**
          * Lets inflate the very first fragment
          * Here , we are inflating the TabFragment as the first Fragment
@@ -125,6 +127,15 @@ public class MainActivity extends AppCompatActivity implements ConnectivityRecei
                         i = new Intent(getApplicationContext(),ServicesActivity.class);
                         startActivity(i);
                         break;
+                    case R.id.privacy:
+                        hasInternetPermission = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.INTERNET);
+                        if (hasInternetPermission != PackageManager.PERMISSION_GRANTED) {
+                            requestPermissions(new String[] {Manifest.permission.INTERNET},1);
+                            return false;
+                        }
+                        i = new Intent(getApplicationContext(),PrivacyActivity.class);
+                        startActivity(i);
+                        break;
                     case R.id.settings:
                         FragmentTransaction x6fragmentTransaction = mFragmentManager.beginTransaction();
                         x6fragmentTransaction.replace(R.id.containerView,new LogoutFragment()).addToBackStack(null).commit();
@@ -149,6 +160,14 @@ public class MainActivity extends AppCompatActivity implements ConnectivityRecei
     }
 
     private void getUser() {
+
+        String test = sp.getString("UID", null);
+        String UID = sp.getString("IsTempUser", null);
+        String IsTempUser = sp.getString("LoginEmail", null);
+        String Password = sp.getString("Password", null);
+        String CompanyName = sp.getString("CompanyName", null);
+        String contactpersonname = sp.getString("ContactPersonName", null);
+
         User.setUID(sp.getString("UID",null));
         User.setIsTempUser(sp.getString("IsTempUser",null));
         User.setLoginEmail(sp.getString("LoginEmail",null));

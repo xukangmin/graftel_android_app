@@ -44,7 +44,7 @@ public class SearchResultsActivity extends AppCompatActivity implements Connecti
     JSONParser jParser = new JSONParser(); // Creating JSON Parser object
     ArrayList<HashMap<String, String>> tempList;
 
-    private static String url = "http://www.graftel.com/appport/webSearchCalInfoProd.php";
+    private static String url = "https://www.graftel.com/appport/webSearchCalInfoProd.php";
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_CID = "Calibration ID #";

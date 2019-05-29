@@ -18,11 +18,11 @@
         android:paddingRight="20dp" >
 
         <ImageView
-            android:layout_width="170dp"
-            android:layout_height="150dp"
             android:id="@+id/imageView"
-            android:src="@drawable/login_logo"
-            android:layout_gravity="center"/>
+            android:layout_width="420dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_logo" />
 
         <EditText
             android:id="@+id/email"

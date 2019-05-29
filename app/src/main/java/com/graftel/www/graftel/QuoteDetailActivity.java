@@ -17,6 +17,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -67,8 +68,8 @@ public class QuoteDetailActivity extends AppCompatActivity implements Connectivi
     JSONParser jParser = new JSONParser(); // Creating JSON Parser object
     ArrayList<HashMap<String, String>> list1,list2;
 
-    private String info = "http://www.graftel.com/appport/webGetCalInfoProd.php";
-    private String docs = "http://www.graftel.com/appport/webGetDocPathProd.php";
+    private String info = "https://www.graftel.com/appport/webGetCalInfoProd.php";
+    private String docs = "https://www.graftel.com/appport/webGetDocPathProd.php";
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_CID = "Calibration ID #";
@@ -392,9 +393,12 @@ public class QuoteDetailActivity extends AppCompatActivity implements Connectivi
                 ActivityCompat.requestPermissions(QuoteDetailActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
                 return;
             }
+            Uri fileURI = null;
             try {
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setDataAndType(Uri.fromFile(new File(mFileName)), "application/pdf");
+                fileURI = FileProvider.getUriForFile(QuoteDetailActivity.this, getString(R.string.file_provider_authority), new File(mFileName));
+                i.setDataAndType(fileURI, "application/pdf");
+                i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 startActivity(i);
             } catch (ActivityNotFoundException e) {
                 Toast.makeText(getApplicationContext(), "No Application to view PDF", Toast.LENGTH_SHORT).show();
