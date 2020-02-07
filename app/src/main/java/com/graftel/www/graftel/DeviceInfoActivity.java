@@ -45,7 +45,7 @@ import android.widget.Toast;
 import com.graftel.www.graftel.database.JSONParser;
 import com.graftel.www.graftel.mail.SendMail;
 
-import org.apache.commons.net.ftp.FTPSClient;
+import org.apache.commons.net.ftp.FTPClient;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -445,7 +445,7 @@ public class DeviceInfoActivity extends AppCompatActivity implements Connectivit
         protected String doInBackground(String... params) {
             try
             {
-                FTPSClient mFtpClient = User.getmFtpClient();
+                FTPClient mFtpClient = User.getmFtpClient();
                 File download = new File(mFileName);
                 if(!download.getParentFile().isDirectory())
                     download.getParentFile().mkdir();

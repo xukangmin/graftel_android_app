@@ -3,7 +3,7 @@ package com.graftel.www.graftel;
 import android.os.StrictMode;
 
 import org.apache.commons.net.ftp.FTP;
-import org.apache.commons.net.ftp.FTPSClient;
+import org.apache.commons.net.ftp.FTPClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,18 +23,18 @@ public class User {
     private static String companyName;
     private static String contactPersonName;
 
-    public static FTPSClient getmFtpClient() {
+    public static FTPClient getmFtpClient() {
         try
         {
        //     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             //    StrictMode.setThreadPolicy(policy);
-            mFtpClient = new FTPSClient("SSL");
+            mFtpClient = new FTPClient();
             mFtpClient.setConnectTimeout(10 * 1000);
             mFtpClient.connect("port.magneticflowmetercalibration.com",48701);
             mFtpClient.login("FTPoutside", "brUth7#tAb");
             mFtpClient.setFileType(FTP.BINARY_FILE_TYPE);
-            mFtpClient.execPBSZ(0);
-            mFtpClient.execPROT("P");
+//            mFtpClient.execPBSZ(0);
+//            mFtpClient.execPROT("P");
             mFtpClient.enterLocalPassiveMode();
         }
         catch (SocketException e)
@@ -52,7 +52,7 @@ public class User {
         return mFtpClient;
     }
 
-    public static void setmFtpClient(FTPSClient mFtpClient) {
+    public static void setmFtpClient(FTPClient mFtpClient) {
         User.mFtpClient = mFtpClient;
     }
 
@@ -63,7 +63,7 @@ public class User {
     private static String addEmail2;
     private static String addEmail3;
     private static String addEmail4;
-    private static FTPSClient mFtpClient;
+    private static FTPClient mFtpClient;
 
     public User(JSONObject json) throws JSONException
     {

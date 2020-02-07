@@ -35,6 +35,7 @@ import android.widget.Toast;
 
 import com.graftel.www.graftel.database.JSONParser;
 
+import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPSClient;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -364,7 +365,7 @@ public class QuoteDetailActivity extends AppCompatActivity implements Connectivi
         @Override
         protected String doInBackground(String... params) {
             try {
-                FTPSClient mFtpClient = User.getmFtpClient();
+                FTPClient mFtpClient = User.getmFtpClient();
                 File download = new File(mFileName);
                 System.out.println(download.getParentFile());
                 if (!download.getParentFile().isDirectory())
