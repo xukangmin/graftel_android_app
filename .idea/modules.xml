@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/calibration_android_app.iml" filepath="$PROJECT_DIR$/calibration_android_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="calibration_android_app/app" />
+      <module fileurl="file://$PROJECT_DIR$/calibration_android_app.iml" filepath="$PROJECT_DIR$/calibration_android_app.iml" group="calibration_android_app" />
     </modules>
   </component>
 </project>

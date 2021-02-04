@@ -22,7 +22,7 @@ public class GuestActivity  extends FragmentActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment_container, contactFragment).commit();
         }
-    }
+}
 
     @Override
     public void onBackPressed() {
